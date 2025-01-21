@@ -1,0 +1,38 @@
+<div class="wrapper">
+
+  <section class="back">
+    <div class="top">
+      <h3>{{ 'part2.whoWeAre.title'|tr }}</h3>
+    </div>
+    <div class="bottom">
+      <ngx-slick-carousel #slickModal="slick-carousel"
+                          [config]="slideConfig"
+                          class="carousel">
+
+        <div *ngFor="let slide of [1,2,3,4,5,6]" class="slide" ngxSlickItem>
+
+          <div class="panel">
+            <img class="back" src="assets/horizontalPanel.svg"/>
+
+            <img class="man" src="assets/man.png">
+            <div class="text">
+
+              <h3>
+                Jevgen
+              </h3>
+              <h4>CEO & founder</h4>
+              <p>
+                I enjoy AI because it allows me to work more efficiently and tackle challenges I once thought were too complex. The way it learns and
+                adapts
+                feels almost magical, making technology more intuitive and accessible.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </ngx-slick-carousel>
+
+
+    </div>
+  </section>
+</div>
