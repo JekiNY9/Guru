@@ -46,21 +46,15 @@ import {PanelTextWithImageComponent} from './pages/main-page/panel-text-with-ima
 import {HorizontalPersonComponent} from './pages/main-page/horizontal-person/horizontal-person.component';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {SanitizeHtmlPipe} from './pipes/sanitizer.pipe';
+import {UserCabinetPageComponent} from './pages/user-cabinet-page/user-cabinet-page.component';
+import {provideLottieOptions} from 'ngx-lottie';
+import player from 'lottie-web';
+import {UserCabinetTopBeltComponent} from './pages/user-cabinet-page/components/user-cabinet-top-belt/user-cabinet-top-belt.component';
+import {UserCabinetNavComponent} from './pages/user-cabinet-page/components/user-cabinet-nav/user-cabinet-nav.component';
 
 @NgModule({
   bootstrap: [AppComponent],
-  declarations: [
-    AppComponent,
-    ChatPageComponent, MaxLengthPipe,
-    ChatBoxComponent, SanitizeHtmlPipe,
-    MainPageComponent, TranslatePipe,
-    MainBannerComponent,
-    OurPartnersComponent, TrPipe,
-    AiDocumentationComponent,
-    SmoothScrollComponent,
-    FooterComponent, ChooseLanguageModalComponent,
-    AccessibilityComponent, ChooseLanguageComponent, GridPanelCustomerComponent, RowInformationsComponent, RowInformationComponent, WheAreWeComponent, PanelTextWithImageComponent, HorizontalPersonComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -78,12 +72,24 @@ import {SanitizeHtmlPipe} from './pipes/sanitizer.pipe';
       faBrandTwitter,
       faBrandFacebook,
       faBrandXTwitter, faBrandDiscord, faBrandMedium, faBrandYoutube,
-
-    }), SlickCarouselModule
+    }), SlickCarouselModule, UserCabinetNavComponent,
+    ChatPageComponent, MaxLengthPipe,
+    ChatBoxComponent, SanitizeHtmlPipe,
+    MainPageComponent, TranslatePipe,
+    MainBannerComponent,
+    OurPartnersComponent, TrPipe,
+    AiDocumentationComponent,
+    SmoothScrollComponent,
+    FooterComponent, ChooseLanguageModalComponent,
+    AccessibilityComponent, ChooseLanguageComponent, GridPanelCustomerComponent, RowInformationsComponent, RowInformationComponent, WheAreWeComponent, PanelTextWithImageComponent, HorizontalPersonComponent, UserCabinetPageComponent, UserCabinetTopBeltComponent
   ],
+  exports: [],
   providers: [
     provideAnimationsAsync(),
-    TranslateService
+    TranslateService,
+    provideLottieOptions({
+      player: () => player,
+    }),
   ]
 })
 export class AppModule {

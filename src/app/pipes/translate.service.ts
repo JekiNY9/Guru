@@ -26,7 +26,7 @@ export class TranslateService {
   getLanguageFile(language: string = 'pl') {
 
     try {
-      this.http
+      this.http///Guru
         .get(`/Guru/translate/${language}.json?random=${this.random}`)
         .subscribe({
           next: (data) => {
