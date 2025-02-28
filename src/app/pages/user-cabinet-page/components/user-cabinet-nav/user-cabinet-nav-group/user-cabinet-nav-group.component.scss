@@ -65,6 +65,12 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  ng-icon {
+    font-size: 25px;
+    margin: auto;
+  }
 }
 
 .center {
@@ -82,8 +88,17 @@
   align-items: center;
   justify-content: center;
 
-  img {
-    height: 30px;
-    width: 30px;
+  .icon {
+    transition: 700ms;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  ng-icon {
+    height: 21px;
+    width: 21px;
+    color: rgba(255, 255, 255, 0.3);
   }
 }

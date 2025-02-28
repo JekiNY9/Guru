@@ -1,0 +1,83 @@
+.containerForBlocks {
+  display: flex;
+  gap: 100px;
+  padding: 200px 20px;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: auto;
+
+  .block1 {
+    width: 40%;
+    height: 350px;
+
+    .yt {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: 100%;
+    }
+
+
+    top: -50px;
+    position: relative;
+
+    h3 {
+      color: White;
+      width: 300px;
+      position: absolute;
+      top: 8%;
+      font-size: 22px;
+      right: 11%;
+      text-align: right;
+    }
+
+    .center {
+      position: absolute;
+      height: 50%;
+      width: 50%;
+      left: 10%;
+      top: 39%;
+      object-fit: fill;
+      transform: rotateX(0deg);
+    }
+
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+      transform: rotateX(180deg);
+    }
+  }
+
+  .block2 {
+    width: 40%;
+    height: 350px;
+    top: 50px;
+    position: relative;
+
+    h3 {
+      width: 300px;
+      position: absolute;
+      top: 8%;
+      font-size: 22px;
+      left: 10%;
+      color: White;
+    }
+
+    .center {
+      position: absolute;
+      height: 100%;
+      top: 12%;
+      right: 3%;
+    }
+
+    .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

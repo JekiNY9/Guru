@@ -1,0 +1,69 @@
+.verticalContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  background-color: black;
+
+
+  h2 {
+    padding-top: 40px;
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.containerForSlider {
+  max-width: 1500px;
+  width: 100%;
+  background: black;
+  padding-top: 20px;
+  padding-bottom: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+
+  & > div {
+    display: flex;
+    gap: 30px
+  }
+
+  .sliderContainer {
+    width: 90%;
+  }
+
+
+}
+
+.slide {
+
+  padding-left: 50px;
+  padding-right: 50px;
+  aspect-ratio: 16/9;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 50px;
+
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.blueWord{
+  color: #7d79ff;
+  font-size: 38px;
+}

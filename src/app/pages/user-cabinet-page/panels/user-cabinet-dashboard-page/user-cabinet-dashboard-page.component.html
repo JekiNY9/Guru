@@ -3,12 +3,7 @@
     <div class="nameBlock">
 
       <div class="icon">
-        <ng-lottie
-          [options]="options"
-          containerClass="moving-box another-class"
-          height="40px"
-          width="50px"
-        />
+        <ng-icon [svg]="faSolidGauge"/>
       </div>
       <h2>Dashboard</h2>
     </div>
@@ -41,8 +36,11 @@
 
 </app-user-cabinet-top-belt>
 
+<h2 class="title1">Asset Summary</h2>
 <div class="content">
   <app-user-cabinet-dashboard-page-top-part/>
+
+  <h2>Ai learning score</h2>
   <div class="blocks">
     <app-user-cabinet-stat-block1/>
     <app-user-cabinet-stat-block2/>

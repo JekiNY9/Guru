@@ -1,29 +1,54 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {Component, HostListener, inject} from '@angular/core';
+import {Router} from '@angular/router';
+import {NgClass} from '@angular/common';
+import {NgIcon} from '@ng-icons/core';
+import {AccessibilityComponent} from '../../../fetures/accessibility/accessibility.component';
+import {TrPipe} from '../../../pipes/translate.pipe';
 import {MatDialog} from '@angular/material/dialog';
-import {ChatPageComponent} from '../../chat-page/chat-page.component';
-import { Router, RouterLink } from '@angular/router';
-import { NgClass } from '@angular/common';
-import { NgIcon } from '@ng-icons/core';
-import { AccessibilityComponent } from '../../../fetures/accessibility/accessibility.component';
-import { TrPipe } from '../../../pipes/translate.pipe';
+import {LoginModalComponent} from './login-modal/login-modal.component';
+import {AnimationOptions, LottieComponent} from 'ngx-lottie';
+import {AnimationItem} from 'lottie-web';
 
 @Component({
-    selector: 'app-main-banner',
-    templateUrl: './main-banner.component.html',
-    styleUrls: ['./main-banner.component.scss'],
-    imports: [NgClass, RouterLink, NgIcon, AccessibilityComponent, TrPipe]
+  selector: 'app-main-banner',
+  templateUrl: './main-banner.component.html',
+  styleUrls: ['./main-banner.component.scss'],
+  imports: [NgClass, NgIcon, AccessibilityComponent, TrPipe, LottieComponent]
 })
-export class MainBannerComponent implements OnInit {
+export class MainBannerComponent {
+  secondTheme = false; // Default background color
+  options: AnimationOptions = {
+    path: 'assets/lottie/header.json',
+    autoplay: true,
+    loop: true,
+  };
+  protected readonly navigator = navigator;
+  private ngbModal = inject(MatDialog)
+  private animation!: AnimationItem;
 
-  secondTheme=false; // Default background color
+  constructor(private router_: Router) {
+  }
 
-  constructor(private router_:Router) {}
+  animationCreated(anim: AnimationItem): void {
+    this.animation = anim;
+  }
 
-  ngOnInit(): void {}
-
-  // Listen for the window scroll event
   @HostListener('window:scroll', [])
   onScroll(): void {
+    const banner = document.querySelector('.man');
+    if (!banner) return;
+
+    const rect = banner.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+    if (isVisible) {
+      this.animation.play();
+      console.log(1);
+    } else {
+      console.log(2);
+      this.animation.pause();
+    }
+
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
     // Log scroll position (for debugging purposes)
@@ -37,9 +62,7 @@ export class MainBannerComponent implements OnInit {
     }
   }
 
-  protected readonly navigator = navigator;
-
   openAibotChatModal() {
-
-   this.router_.navigate(['/chatBot'])  }
+    this.ngbModal.open(LoginModalComponent)
+  }
 }
