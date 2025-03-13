@@ -1,0 +1,66 @@
+<app-user-cabinet-top-belt>
+  <div class="topBelt">
+    <div class="nameBlock">
+
+      <!--      <div class="icon">-->
+      <!--        <ng-icon [svg]="faSolidGauge"/>-->
+      <!--      </div>-->
+      <div class="topMenu">
+        <a>Favourite</a>
+        <a>History</a>
+        <a>Workspaces</a>
+        <a>
+          @if (isAdmin()) {
+            Admin
+          } @else {
+            User
+          }
+        </a>
+      </div>
+    </div>
+
+    <div class="filterBlock">
+      <div class="filter">
+        <ng-icon [svg]="remixFilterLine"/>
+      </div>
+      <div class="inputWithIcon">
+        <input placeholder="Search"/>
+        <ng-icon [svg]="faSolidMagnifyingGlass" class="glass"/>
+      </div>
+      <div class="saveButton">
+        <ng-icon [svg]="faBookmark"/>
+      </div>
+      <div class="select">
+        <mat-form-field>
+          <mat-label>All devices</mat-label>
+          <mat-select>
+
+            @for (animal of ["Device 1", "Device 2", "Device 3", "Device 4", "Device 5"]; track animal) {
+              <mat-option [value]="animal">{{ animal }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+  </div>
+
+</app-user-cabinet-top-belt>
+<h2 class="title1">
+  @if (isAdmin()) {
+    Welcome to admin panel
+  } @else {
+    Welcome to user panel
+  }
+</h2>
+<h2 class="title1">Asset Summary</h2>
+<div class="content">
+  <app-user-cabinet-dashboard-page-top-part/>
+
+  <h2>Ai learning score</h2>
+  <div class="blocks">
+    <app-user-cabinet-stat-block1/>
+    <app-user-cabinet-stat-block2/>
+  </div>
+
+</div>

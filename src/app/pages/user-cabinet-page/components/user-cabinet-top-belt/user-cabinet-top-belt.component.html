@@ -1,0 +1,35 @@
+<ng-content></ng-content>
+<button #button (click)="isOpen = !isOpen" class="user">
+  <ng-icon [svg]="faSolidPerson"/>
+</button>
+@if (isOpen) {
+
+  <div class="dropDown" #dropDown>
+    <div class="top">
+      <img [src]="isAdmin()?'assets/profile1.jpg':'assets/profile2.png'"/>
+      <div class="right">
+        <h5>
+          @if (isAdmin()) {
+            System administrator
+          } @else {
+            System user
+          }
+        </h5>
+        <h6>    @if (isAdmin()) {
+          System administrator
+        } @else {
+          System user
+        }</h6>
+        <span><ng-icon [svg]="faChartBar"/> &nbsp;&nbsp;Data panel</span>
+      </div>
+    </div>
+    <ul>
+      <li><span><ng-icon [svg]="faSolidPerson"/></span>Profile</li>
+      <li class="" (click)="openPreferences()"><span><ng-icon [svg]="faSolidChargingStation"/></span>Preferences</li>
+      <li><span><ng-icon [svg]="faKeyboard"/></span>Keyboard shortcuts</li>
+      <li [class]="isAdmin()?'':'not'" [title]="!isAdmin()?'Only for administrator':''"><span><ng-icon [svg]="faSolidUsers"/></span>Impersonate users</li>
+      <li [class]="isAdmin()?'':'not'" [title]="!isAdmin()?'Only for administrator':''"><span><ng-icon [svg]="faSolidArrowTurnUp"/></span>Elevate role</li>
+      <li class="" (click)="logOut()"><span><ng-icon [svg]="faSolidArrowRightFromBracket"/></span>Log out</li>
+    </ul>
+  </div>
+}

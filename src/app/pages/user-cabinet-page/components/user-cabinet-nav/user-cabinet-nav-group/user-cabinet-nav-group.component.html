@@ -1,0 +1,33 @@
+<div class="menu">
+  <div (click)="toggle()" class="menu-header">
+    <div class="left">
+      <ng-icon [svg]="faAddressBook"/>
+    </div>
+    <div class="center">
+        <span>
+      Invetory
+    </span>
+    </div>
+    <div class="right">
+      <ng-icon [ngClass]="{open:!isOpen}" [svg]="faSolidArrowDown" class='icon'></ng-icon>
+    </div>
+
+  </div>
+  <div [ngClass]="{open:isOpen }" class="menu-content">
+    @for (item of elements; track item; let i = $index) {
+      <a>
+        <div class="left">
+        </div>
+        <div class="center">
+        <span>
+        {{ item }}
+        </span>
+        </div>
+
+        <div class="right">
+          <ng-icon [svg]="icons[i]"/>
+        </div>
+      </a>
+    }
+  </div>
+</div>
