@@ -6,6 +6,16 @@ html, body {
   --mat-select-enabled-trigger-text-color: white;
 }
 
+.preferencesModal {
+  width: 600px;
+  border-radius: 0;
+  max-width: 600px !important;
+
+  .mdc-dialog__surface {
+    border-radius: 7px !important;
+  }
+}
+
 .mat-mdc-select-panel {
   background: linear-gradient(135deg, #2c2c2c, #1a1a1a) !important;
 
