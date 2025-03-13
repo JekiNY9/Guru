@@ -1,7 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import VanillaTilt from 'vanilla-tilt';
 import {TranslateService} from './pipes/translate.service';
-import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -17,29 +15,29 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
 
-    setInterval(() => {
-      const elements = document.querySelectorAll('[data-tilt]:not([data-tilt-initialized])');
-      if (elements.length > 0) {
-        // @ts-ignore
-        VanillaTilt.init(elements, {
-          max: 15,
-          speed: 400,
-          glare: false,
-          'max-glare': 0.2,
-        });
-        elements.forEach((element) => {
-          element.setAttribute('data-tilt-initialized', 'true');
-        });
-        // @ts-ignore
-
-      }
-    }, 1000);
+    // setInterval(() => {
+    //   const elements = document.querySelectorAll('[data-tilt]:not([data-tilt-initialized])');
+    //   if (elements.length > 0) {
+    //     // @ts-ignore
+    //     VanillaTilt.init(elements, {
+    //       max: 15,
+    //       speed: 400,
+    //       glare: false,
+    //       'max-glare': 0.2,
+    //     });
+    //     elements.forEach((element) => {
+    //       element.setAttribute('data-tilt-initialized', 'true');
+    //     });
+    //     // @ts-ignore
+    //
+    //   }
+    // }, 1000);
 
 
   }
 
   ngOnInit() {
-    AOS.init({})
+    //AOS.init({})
     this.translate.getLanguageFile("en")
     // // @ts-ignore
     // $(".marquee").marquee({

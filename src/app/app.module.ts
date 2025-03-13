@@ -51,6 +51,7 @@ import {provideLottieOptions} from 'ngx-lottie';
 import player from 'lottie-web';
 import {UserCabinetTopBeltComponent} from './pages/user-cabinet-page/components/user-cabinet-top-belt/user-cabinet-top-belt.component';
 import {UserCabinetNavComponent} from './pages/user-cabinet-page/components/user-cabinet-nav/user-cabinet-nav.component';
+import {LoadingPageComponent} from "./pages/loading-page/loading-page.component";
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -81,7 +82,7 @@ import {UserCabinetNavComponent} from './pages/user-cabinet-page/components/user
     AiDocumentationComponent,
     SmoothScrollComponent,
     FooterComponent, ChooseLanguageModalComponent,
-    AccessibilityComponent, ChooseLanguageComponent, GridPanelCustomerComponent, RowInformationsComponent, RowInformationComponent, WheAreWeComponent, PanelTextWithImageComponent, HorizontalPersonComponent, UserCabinetPageComponent, UserCabinetTopBeltComponent
+    AccessibilityComponent, ChooseLanguageComponent, GridPanelCustomerComponent, RowInformationsComponent, RowInformationComponent, WheAreWeComponent, PanelTextWithImageComponent, HorizontalPersonComponent, UserCabinetPageComponent, UserCabinetTopBeltComponent, LoadingPageComponent
   ],
   exports: [],
   providers: [

@@ -1,6 +1,6 @@
 <div class="loginBlock">
   <h2>Login to user panel</h2>
-  <input type="text" placeholder="Login">
-  <input type="password" placeholder="Password">
+  <input [(ngModel)]="login" placeholder="Login" type="text">
+  <input placeholder="Password" type="password">
   <button (click)="goToAdmin()">Login</button>
 </div>

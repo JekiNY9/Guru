@@ -9,7 +9,8 @@ const routes: Routes = [
   {
     path: '',
     component: MainPageComponent
-  }, {
+  },
+  {
     path: 'chatBot',
     component: ChatPageComponent
   }, {

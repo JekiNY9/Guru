@@ -19,7 +19,7 @@ import {faBrandFacebook, faBrandGithub, faBrandInstagram, faBrandThreads, faBran
 })
 export class FooterComponent implements OnInit, OnDestroy {
   options = {
-    path: '/assets/lottie/bottom.json',  // Ścieżka do pliku animacji
+    path: 'assets/lottie/bottom.json',  // Ścieżka do pliku animacji
     autoplay: true,
     loop: true,
     animationSpeed: 0.5,  // Spowolniona animacja
