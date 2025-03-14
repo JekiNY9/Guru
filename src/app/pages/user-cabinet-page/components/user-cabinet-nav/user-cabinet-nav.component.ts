@@ -2,7 +2,18 @@ import {Component} from '@angular/core';
 import {AnimationOptions} from 'ngx-lottie';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 import {UserCabinetNavGroupComponent} from './user-cabinet-nav-group/user-cabinet-nav-group.component';
-import {faSolidDesktop, faSolidGauge, faSolidLock, faSolidNetworkWired, faSolidPerson, faSolidShield} from '@ng-icons/font-awesome/solid';
+import {
+  faSolidArrowsRotate,
+  faSolidDesktop,
+  faSolidFilter,
+  faSolidGauge,
+  faSolidLock,
+  faSolidMapPin,
+  faSolidNetworkWired,
+  faSolidPerson,
+  faSolidShield,
+  faSolidThumbtack
+} from '@ng-icons/font-awesome/solid';
 import {NgIcon} from '@ng-icons/core';
 import {faBrandSpeakerDeck} from '@ng-icons/font-awesome/brands';
 import {faNoteSticky} from '@ng-icons/font-awesome/regular';
@@ -35,4 +46,8 @@ export class UserCabinetNavComponent {
   protected readonly faBrandSpeakerDeck = faBrandSpeakerDeck;
   protected readonly faSolidGauge = faSolidGauge;
   protected readonly faNoteSticky = faNoteSticky;
+  protected readonly faSolidArrowsRotate = faSolidArrowsRotate;
+  protected readonly faSolidMapPin = faSolidMapPin;
+  protected readonly faSolidThumbtack = faSolidThumbtack;
+  protected readonly faSolidFilter = faSolidFilter;
 }

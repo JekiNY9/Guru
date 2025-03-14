@@ -8,6 +8,7 @@ import {faSolidArrowRightFromBracket} from '@ng-icons/font-awesome/solid';
   selector: 'app-user-cabinet-page',
   templateUrl: './user-cabinet-page.component.html',
   styleUrl: './user-cabinet-page.component.scss',
+  standalone: true,
   imports: [RouterOutlet, UserCabinetNavComponent, NgIcon, RouterLink]
 })
 export class UserCabinetPageComponent {
@@ -28,7 +29,7 @@ export class UserCabinetPageComponent {
       this.count++;
       originalTick.apply(this.appRef);
     };
- 
+
     this.zone.runOutsideAngular(() => {
       setInterval(() => {
         this.zone.run(() => {

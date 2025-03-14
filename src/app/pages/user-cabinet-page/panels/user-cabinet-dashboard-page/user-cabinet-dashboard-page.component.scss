@@ -28,8 +28,16 @@ h2 {
   margin-bottom: 0;
   padding-bottom: 0;
 
+  &.title2 {
+    padding-left: 20px;
+  }
+
   &.title1 {
     padding-left: 20px;
+
+    padding-bottom: 20px;
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -93,7 +101,7 @@ h2 {
     }
 
     .inputWithIcon {
-      width: 400px;
+      width: 200px;
       position: relative;
       display: flex;
 
@@ -213,10 +221,39 @@ h2 {
   padding: 20px;
   flex-direction: column;
 
+
   .blocks {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
+  }
+
+  .row {
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}
+
+.sharedBtn {
+  border-radius: 10px;
+  margin-right: 50px;
+  color: white;
+  padding: 0 20px;
+  background: transparent;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+
+  &:hover {
+
+    background: rgba(214, 214, 214, 0.11);;
+  }
+
+  ng-icon {
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
   }
 }

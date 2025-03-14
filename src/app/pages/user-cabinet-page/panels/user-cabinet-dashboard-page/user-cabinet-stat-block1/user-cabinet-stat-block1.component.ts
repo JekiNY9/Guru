@@ -3,13 +3,13 @@ import {NgStyle} from '@angular/common';
 import {faSolidCheck, faSolidExclamation, faSolidInfo} from '@ng-icons/font-awesome/solid';
 import {NgIcon} from '@ng-icons/core';
 import {remixCloseFill, remixVipDiamondLine} from '@ng-icons/remixicon';
-import {LottieComponent} from 'ngx-lottie';
+import {MediumBlockComponent} from '../components/medium-block/medium-block.component';
 
 @Component({
   selector: 'app-user-cabinet-stat-block1',
   standalone: true,
   templateUrl: './user-cabinet-stat-block1.component.html',
-  imports: [NgStyle, NgIcon, LottieComponent],
+  imports: [NgStyle, NgIcon, MediumBlockComponent],
   styleUrl: './user-cabinet-stat-block1.component.scss'
 })
 export class UserCabinetStatBlock1Component {

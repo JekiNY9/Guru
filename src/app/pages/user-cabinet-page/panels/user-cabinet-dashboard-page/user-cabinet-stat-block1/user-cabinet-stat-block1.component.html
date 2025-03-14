@@ -1,37 +1,38 @@
 <div class="block">
   <div class="innerTopBlock">
-    <div class="left">
+    <!--    <div class="left">-->
+    <app-medium-block [top]="'Open incidents'"/>
+    <app-medium-block [top]="'Open requests'"/>
+    <!--      <ng-lottie-->
+    <!--        [options]="{-->
+    <!--                path:'assets/lottie/chars4.json'-->
+    <!--                }"-->
+    <!--        containerClass="moving-box another-class"-->
+    <!--        height="100%"-->
+    <!--        width="100%"-->
+    <!--      />-->
 
-      <ng-lottie
-        [options]="{
-                path:'assets/lottie/chars4.json'
-                }"
-        containerClass="moving-box another-class"
-        height="100%"
-        width="100%"
-      />
+    <!--    </div>-->
+    <!--    <div class="right">-->
+    <!--      @for (line of lines; track line) {-->
+    <!--        <div class="lineBlock">-->
+    <!--          <div class="circle" [ngStyle]="{backgroundColor:line.color}">-->
+    <!--            <ng-icon [svg]="line.icon"/>-->
+    <!--          </div>-->
+    <!--          <div class="line">-->
+    <!--            <div class="innerLine" [ngStyle]="{backgroundColor:line.color,width:Math.round(line.value)+'%'}">-->
 
-    </div>
-    <div class="right">
-      @for (line of lines; track line) {
-        <div class="lineBlock">
-          <div class="circle" [ngStyle]="{backgroundColor:line.color}">
-            <ng-icon [svg]="line.icon"/>
-          </div>
-          <div class="line">
-            <div class="innerLine" [ngStyle]="{backgroundColor:line.color,width:Math.round(line.value)+'%'}">
-
-            </div>
-          </div>
-          <div class="numberBlock">
-            0
-          </div>
-          <div class="spanBlock">
-            {{ Math.round(line.value) }}%
-          </div>
-        </div>
-      }
-    </div>
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="numberBlock">-->
+    <!--            0-->
+    <!--          </div>-->
+    <!--          <div class="spanBlock">-->
+    <!--            {{ Math.round(line.value) }}%-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      }-->
+    <!--    </div>-->
   </div>
   <div class="horizontalBar">
     <div class="topPart">

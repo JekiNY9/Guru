@@ -2,6 +2,47 @@
   display: contents;;
 }
 
+.mediumBlock {
+  height: 180px;
+  width: 49%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  .top {
+    padding: 10px;
+    display: flex;
+    font-size: 20px;
+
+  }
+
+  position: relative;
+
+  .bottom {
+    height: 150px;
+
+    .left {
+      position: relative;
+      left: -10px;
+      height: 100%;
+      display: flex;
+
+      font-size: 30px;
+    }
+
+
+    .right {
+
+      ng-lottie {
+       
+        position: absolute;
+        top: 30px
+      }
+    }
+  }
+}
+
 .block {
   width: 48%;
   min-height: 200px;
@@ -21,9 +62,12 @@
   border: 2px solid var(--borderColor);
 
   .innerTopBlock {
+    border-radius: 10px;
+    display: flex;
     width: calc(100% - 20px);
     min-height: 200px;
     position: relative;
+    justify-content: space-between;
     top: -20px;
     background: linear-gradient(135deg,
       rgba(52, 49, 49, 0.1),

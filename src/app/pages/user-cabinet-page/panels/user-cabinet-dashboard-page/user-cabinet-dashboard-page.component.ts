@@ -7,10 +7,13 @@ import {faSolidFilter, faSolidGauge, faSolidMagnifyingGlass} from '@ng-icons/fon
 import {NgIcon} from '@ng-icons/core';
 import {UserCabinetTopBeltComponent} from '../../components/user-cabinet-top-belt/user-cabinet-top-belt.component';
 import {remixFilterLine} from '@ng-icons/remixicon';
-import {faBookmark} from '@ng-icons/font-awesome/regular';
+import {faBookmark, faStar} from '@ng-icons/font-awesome/regular';
 import {MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatOption} from '@angular/material/core';
 import {MatSelect} from '@angular/material/select';
+import {MiniBlockComponent} from './components/mini-block/mini-block.component';
+import {MediumBlockComponent} from './components/medium-block/medium-block.component';
+import {UserCabinetTopPanelComponent} from './components/user-cabinet-top-panel/user-cabinet-top-panel.component';
 
 
 @Component({
@@ -18,7 +21,7 @@ import {MatSelect} from '@angular/material/select';
   templateUrl: './user-cabinet-dashboard-page.component.html',
   styleUrl: './user-cabinet-dashboard-page.component.scss',
   standalone: true,
-  imports: [UserCabinetDashboardPageTopPartComponent, UserCabinetStatBlock1Component, UserCabinetStatBlock2Component, NgIcon, UserCabinetTopBeltComponent, MatFormField, MatOption, MatSelect, MatLabel]
+  imports: [UserCabinetDashboardPageTopPartComponent, UserCabinetStatBlock1Component, UserCabinetStatBlock2Component, NgIcon, UserCabinetTopBeltComponent, MatFormField, MatOption, MatSelect, MatLabel, MiniBlockComponent, MediumBlockComponent, UserCabinetTopPanelComponent]
 })
 export class UserCabinetDashboardPageComponent {
   options: AnimationOptions = {
@@ -32,6 +35,7 @@ export class UserCabinetDashboardPageComponent {
   protected readonly remixFilterLine = remixFilterLine;
   protected readonly faBookmark = faBookmark;
   protected readonly faSolidGauge = faSolidGauge;
+  protected readonly faStar = faStar;
 
   isAdmin() {
     try {

@@ -8,9 +8,9 @@
     cursor: pointer;
     width: 100%;
     font-size: 17px;
-    height: 50px;
+    height: 30px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     &:hover {
       background-color: rgba(255, 106, 0, 0.17);
@@ -36,9 +36,10 @@
         background-color: rgba(255, 106, 0, 0.17);
       }
 
-      height: 50px;
+      min-height: 30px;
+      height: 30px;
       display: flex;
-      justify-content: space-between;
+
       align-items: center;
 
       span {
@@ -61,24 +62,35 @@
 }
 
 .left {
-  width: 20%;
+  width: 30px;
+  padding-right: 10px;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   ng-icon {
-    font-size: 25px;
+    font-size: 12px;
     margin: auto;
   }
 }
 
+.leftBottom {
+  margin-left: 9px;
+  border-left: 1px solid #ffffff;
+  height: 100%;
+  width: 10px;
+}
+
 .center {
-  width: 60%;
+  width: 90%;
   padding-left: 10px;
   height: 100%;
   display: flex;
+  color: white;
   align-items: center;
+
+
 }
 
 .right {
@@ -88,17 +100,23 @@
   align-items: center;
   justify-content: center;
 
-  .icon {
-    transition: 700ms;
-
-    &.open {
-      transform: rotate(180deg);
-    }
-  }
 
   ng-icon {
-    height: 21px;
-    width: 21px;
+    height: 15px;
+    width: 15px;
     color: rgba(255, 255, 255, 0.3);
   }
+}
+
+.icon {
+  transition: 300ms;
+
+  &.open {
+    transform: rotate(-90deg);
+  }
+}
+
+.innerCenter {
+  color: #bcbcbc !important;
+
 }

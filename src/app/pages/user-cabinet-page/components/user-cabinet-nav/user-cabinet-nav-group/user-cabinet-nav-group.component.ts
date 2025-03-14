@@ -17,11 +17,11 @@ import {faAddressBook} from '@ng-icons/font-awesome/regular';
 })
 export class UserCabinetNavGroupComponent {
   @Input() elements!: string[];
-  isOpen = true;
+  isOpen = false;
   options: AnimationOptions = {
     path: 'assets/lottie/dashLottie.json',
   };
-  @Input() icons!: string[];
+  @Input() titleNav!: string;
   protected readonly faSolidArrowDown = faSolidArrowDown;
   protected readonly faSolidBox = faSolidBox;
   protected readonly faAddressBook = faAddressBook;

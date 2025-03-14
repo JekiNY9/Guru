@@ -2,23 +2,112 @@
   <h1>
     Data panel
   </h1>
-  @for (link of [{name: 'Dashboard', link: "./dashboard", icon: faSolidGauge}, {name: 'Reports', link: './reports', icon: faNoteSticky}]; track link) {
+  <div class="topControls">
+    <input placeholder="Filter">
+    <ng-icon [svg]="faSolidFilter" class="filterIcon"/>
+    <ng-icon [svg]="faSolidArrowsRotate"/>
+    <ng-icon [svg]="faSolidThumbtack"/>
+  </div>
+  <div class="bottom">
 
-    <a [routerLinkActive]="'active'" [routerLink]="[link.link]" class="menuLink">
-      <div class="left">
-        <ng-icon [svg]="link.icon"/>
-      </div>
-      <div class="center">
-        {{ link.name }}
-      </div>
-      <div class="right">
+    @for (link of [{name: 'Dashboard', link: "./dashboard", icon: faSolidGauge}]; track link) {
 
-      </div>
-    </a>
-  }
-  <app-user-cabinet-nav-group
-    [elements]="['Devices', 'Software', 'Vulnerabilities', 'Networks']"
-    [icons]="[faSolidDesktop, faSolidLock   , faSolidShield  , faSolidNetworkWired]"/>
+      <a [routerLinkActive]="'active'" [routerLink]="[link.link]" class="menuLink">
+        <div class="left">
+          <ng-icon class="icon" [svg]="link.icon"/>
+        </div>
+        <div class="center">
+          {{ link.name }}
+        </div>
+        <div class="right">
 
+        </div>
+      </a>
+    }
+    <app-user-cabinet-nav-group
+      [elements]="['App Install', 'ML Settings', 'System Repair']"
+      [titleNav]="'Lab Management'"
+    />
 
+    <app-user-cabinet-nav-group
+      [elements]="['Subscriptions', 'App Engine', 'User Requests', 'Knowledge Base']"
+      [titleNav]="'Self-Service'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Benchmarks', 'Calendar', 'Capacity Plan', 'Service Status']"
+      [titleNav]="'Availability'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Events', 'Work Hours', 'Holidays', 'Reminders']"
+      [titleNav]="'Business Calendar'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['User Certs', 'System Certs', 'Revocation', 'Validation']"
+      [titleNav]="'Certificate Auth'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Categories', 'Tags', 'Metadata', 'Search Opt']"
+      [titleNav]="'Content Taxonomy'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Chatbots', 'Voice Bots', 'Forms', 'Quick Replies']"
+      [titleNav]="'Conv Interfaces'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Flowcharts', 'Entity Maps', 'System Diagrams']"
+      [titleNav]="'Diagram Builder'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Webhooks', 'Containers', 'Images', 'Compose Files']"
+      [titleNav]="'Docker'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Record Links', 'Field Maps', 'Data Sync', 'Dependencies']"
+      [titleNav]="'Dynamic Records'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Onboarding', 'Requests', 'HR Policies', 'Benefits']"
+      [titleNav]="'Employee Center'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Triggers', 'Actions', 'Rules', 'Integrations']"
+      [titleNav]="'Entity Mapper'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Expressions', 'Variables', 'Calculations']"
+      [titleNav]="'Formulas'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Exclusions', 'Allow List', 'Geo Filters']"
+      [titleNav]="'Global IP Rules'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Decisions', 'Steps', 'Templates', 'Permissions']"
+      [titleNav]="'Guided Setup'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['Errors', 'Warnings', 'Logs', 'Performance']"
+      [titleNav]="'Instance Scan'"
+    />
+
+    <app-user-cabinet-nav-group
+      [elements]="['APIs', 'Flows', 'Webhooks', 'Connectors']"
+      [titleNav]="'Integration Hub'"
+    />
+
+  </div>
 </div>

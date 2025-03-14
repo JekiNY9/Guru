@@ -20,6 +20,17 @@
     </div>
 
     <div class="filterBlock">
+
+      <button class="sharedBtn">
+        @if (isAdmin()) {
+          Shared admin dashboard
+        } @else {
+          Shared user dashboard
+        }
+
+        <ng-icon [svg]="faStar"/>
+      </button>
+
       <div class="filter">
         <ng-icon [svg]="remixFilterLine"/>
       </div>
@@ -46,21 +57,39 @@
   </div>
 
 </app-user-cabinet-top-belt>
-<h2 class="title1">
+<h2 class="title2">
   @if (isAdmin()) {
     Welcome to admin panel
   } @else {
     Welcome to user panel
   }
 </h2>
-<h2 class="title1">Asset Summary</h2>
 <div class="content">
-  <app-user-cabinet-dashboard-page-top-part/>
+  <app-user-cabinet-top-panel/>
 
-  <h2>Ai learning score</h2>
-  <div class="blocks">
-    <app-user-cabinet-stat-block1/>
-    <app-user-cabinet-stat-block2/>
-  </div>
+  @if (isAdmin()) {
+    <app-user-cabinet-dashboard-page-top-part/>
+    <!--    <div class="row">-->
+      <!--      <app-mini-block [value]="43" [top]="'Open P1 incidents'"/>-->
+      <!--      &lt;!&ndash;      <app-mini-block [value]="143" [top]="'Total incidents'"/>&ndash;&gt;-->
+      <!--    </div>-->
+      <!--    <h2>Ai learning score</h2>-->
+    <div class="blocks">
+      <app-user-cabinet-stat-block1/>
+      <app-user-cabinet-stat-block2/>
+    </div>
+  } @else {
 
+    <div class="row">
+
+      <app-medium-block [top]="'Open request items'"/>
+      <app-mini-block [height]="'180px'" [value]="43" [top]="'Aging incidents over 24 hrs'"/>
+      <app-mini-block [height]="'180px'" [value]="34" [top]="'Request items over 24 hrs'"/>
+      <app-mini-block [height]="'180px'" [value]="8" [top]="'Request items awaiting approval'"/>
+    </div>
+    <div class="row">
+
+      <!--      <app-mini-block [value]="143" [top]="'Total incidents'"/>-->
+    </div>
+  }
 </div>

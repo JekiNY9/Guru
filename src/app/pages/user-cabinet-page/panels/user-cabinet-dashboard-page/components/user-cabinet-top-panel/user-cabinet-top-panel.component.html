@@ -1,0 +1,29 @@
+<div class="panel">
+  <div class="left">
+
+    <h3>
+      Track what's important to you
+    </h3>
+    <h2>
+      Shared
+      @if (isAdmin()) {
+        admin
+      } @else {
+        user
+      } dashboard
+      <div class="icon">
+        <ng-icon [svg]="faSolidPen"/>
+      </div>
+    </h2>
+  </div>
+  <div class="right">
+    @if (isAdmin()) {
+      <button class="btn1">
+        Exit editing mode
+      </button>
+      <button class="btn2">
+        Add new element
+      </button>
+    }
+  </div>
+</div>

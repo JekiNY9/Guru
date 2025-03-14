@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   padding: 8px;
+  padding-bottom: 90px;
+  height: 100%;
+
+  .bottom {
+    overflow-y: scroll;
+  }
 
   & > h1 {
     font-size: 22px;
@@ -18,12 +24,14 @@
     display: flex;
     color: white;
     width: 100%;
-    height: 50px;
+    height: 29px;
     text-decoration: none;
     align-items: center;
     border-bottom: 1px solid rgba(94, 94, 94, 0.06);
 
     .icon {
+      font-size: 17px;
+
       ng-cion {
         color: white;
       }
@@ -31,7 +39,7 @@
     }
 
     .label {
-      font-size: 25px;
+      font-size: 29px;
 
     }
 
@@ -44,7 +52,8 @@
 
 
 .left {
-  width: 20%;
+  padding-left: 5px;
+  padding-right: 10px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -60,7 +69,7 @@
   height: 100%;
   padding-left: 10px;
   display: flex;
-  font-size: 18px;
+  font-size: 17px;
   align-items: center;
 }
 
@@ -72,3 +81,31 @@
 
 }
 
+.topControls {
+  padding: 0 0 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+
+  .filterIcon {
+    position: absolute;
+    left: 10px;
+    color: rgba(0, 0, 0, 0.64);
+    font-size: 15px;
+  }
+
+  input {
+    height: 30px;
+    padding-left: 30px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-right: 10px;
+  }
+
+  ng-icon {
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+  }
+}
