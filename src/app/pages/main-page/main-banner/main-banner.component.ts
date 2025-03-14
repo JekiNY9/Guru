@@ -18,7 +18,22 @@ import {AnimationItem} from 'lottie-web';
 export class MainBannerComponent {
   secondTheme = false; // Default background color
   options: AnimationOptions = {
-    path: 'assets/lottie/header.json',
+    path: 'assets/lottie/robot.json',
+    autoplay: true,
+    loop: true,
+  };
+  char: AnimationOptions = {
+    path: 'assets/lottie/chars4.json',
+    autoplay: true,
+    loop: true,
+  };
+  char2: AnimationOptions = {
+    path: 'assets/lottie/dashLottie.json',
+    autoplay: true,
+    loop: true,
+  };
+  char3: AnimationOptions = {
+    path: 'assets/lottie/barChart.json',
     autoplay: true,
     loop: true,
   };

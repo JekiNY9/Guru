@@ -100,6 +100,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      height: 100px;
       max-width: 1340px;
       width: 90vw;
       padding-left: 50px;
@@ -381,11 +382,75 @@
   }
 }
 
-.man {
+
+.lottie {
+  width: 80%;
+  pointer-events: none;
+
+  .man {
+    position: absolute;
+    top: calc(50% - 150px);
+    opacity: 1;
+    right: 520px;
+
+    height: 300px;
+    width: 300px;
+    aspect-ratio: 1/1;
+  }
+}
+
+.chars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  pointer-events: all;
+  gap: 0px;
+  row-gap: -200px;
+  width: 700px;
   position: absolute;
-  top: calc(50% - 25vw);
+  top: 12vh;
+  margin-right: 5vw;
+  right: 0vw;
+  z-index: 10000;
+
+  ng-lottie {
+    width: 300px;
+    height: 300px;
+    transform: perspective(400px) rotateY(-30deg) translate3d(50%, 50%, 0) translate(-130px, -130px);
+    transition: 1s;
+
+    &:hover {
+      scale: 1.2;
+      transform: perspective(400px) rotateY(0deg) translate3d(0, 0, 0);
+    }
+
+    &:last-of-type {
+      margin-top: -30px;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  top: -30px; /* nad elementem */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.container:hover .tooltip {
   opacity: 1;
-  right: 10vw;
-  width: 50vw;
-  aspect-ratio: 1/1;
 }

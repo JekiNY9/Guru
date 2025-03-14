@@ -1,12 +1,25 @@
 <div id="particles-js"></div>
 <section class="containerForWrapperBanner">
   <img class="headerLine" src="assets/headerLine.svg">
+  <div class="lottie">
 
-  <ng-lottie (animationCreated)="animationCreated($event)" [options]="options" class="man" height="100%" width=""></ng-lottie>
+    <ng-lottie (animationCreated)="animationCreated($event)" [options]="options" class="man" height="100%" width="600px"></ng-lottie>
+    <div class="chars">
 
-  <video aria-label="Video banner background" autoplay class="videoBanner" loop muted role="presentation">
-    <source src="assets/man.gif" type="video/mp4"/>
-  </video>
+      <ng-lottie (animationCreated)="animationCreated($event)" [options]="char" class="char1"
+      ></ng-lottie>
+
+      <ng-lottie (animationCreated)="animationCreated($event)" [options]="char2" class="cha2"
+      ></ng-lottie>
+
+      <ng-lottie (animationCreated)="animationCreated($event)" [options]="char3" class="char3"
+      ></ng-lottie>
+
+    </div>
+  </div>
+  <!--  <video aria-label="Video banner background" autoplay class="videoBanner" loop muted role="presentation">-->
+  <!--    <source src="assets/man.gif" type="video/mp4"/>-->
+  <!--  </video>-->
   <!--  <div class="testingDiv">-->
   <!--    <div>-->
 
@@ -67,7 +80,7 @@
     </header>
 
     <div class="bannerTitle">
-      <h1> Get Support</h1>
+
       <button (click)="openAibotChatModal()" [attr.aria-label]="'mainPage.banner.bannerButton_aria'|tr" id="idButtonOpenChat"
               tabindex="0">{{ 'mainPage.header.nav.signUp.text'|tr }}
       </button>
